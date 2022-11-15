@@ -11,3 +11,51 @@ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
 Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
 Text Domain:  twentytwentychild
 */
+
+body.error404 {
+    background: #fff;
+}
+.error404-content {
+    width: 100%;
+    margin: 0;
+    max-width: 100%;
+    padding: 5rem 0;
+}
+.error404-content .image-box > img {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.error404-content .content-box .heading {
+    font-size: 12rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.error404-content .content-box .sub-heading {
+    margin-top: 10px;
+}
+.btn {
+    text-decoration: none;
+    padding: 0.8em 1.5em;
+    border-radius: 4px;
+    display: inline-block;
+}
+.btn.btn-primary {
+    background: #ffa8a1;
+    border: 1px solid #ffa8a1;
+    color: #15161f;
+}
+.btn.btn-primary:hover,
+.btn.btn-primary:active,
+.btn.btn-primary:focus {
+    background: #ffb7b1;
+    border: 1px solid #ffb7b1;
+}
+.error404-content .content-box .btn {
+    margin-top: 10px;
+}
+@media (max-width: 767px) {
+    .error404-content .content-box .heading {
+        font-size: 6rem;
+    }
+}
