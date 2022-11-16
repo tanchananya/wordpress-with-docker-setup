@@ -12,3 +12,10 @@ function my_theme_enqueue_styles() {
         $theme->get('Version') // this only works if you have Version in the style header
     );
 }
+
+add_action( 'woocommerce_single_product_summary', 'wp_woocommerce_add_sku_on_single_product_page', 11);
+
+function wp_woocommerce_add_sku_on_single_product_page(){
+    global $product;
+    echo '<p class="product-sku"><strong>SKU:</strong> ' . $product -> get_sku() . '</p>';
+}
