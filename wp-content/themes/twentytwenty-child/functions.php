@@ -13,9 +13,10 @@ function my_theme_enqueue_styles() {
     );
 }
 
-add_action( 'woocommerce_single_product_summary', 'wp_woocommerce_add_sku_on_single_product_page', 11);
-
-function wp_woocommerce_add_sku_on_single_product_page(){
+function wp_woocommerce_add_sku_under_product_title(){
     global $product;
     echo '<p class="product-sku"><strong>SKU:</strong> ' . $product -> get_sku() . '</p>';
 }
+
+add_action( 'woocommerce_single_product_summary', 'wp_woocommerce_add_sku_under_product_title', 11);
+add_action( 'woocommerce_shop_loop_item_title', 'wp_woocommerce_add_sku_under_product_title', 11);
